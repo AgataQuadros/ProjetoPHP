@@ -1,0 +1,32 @@
+/* body {
+    font-family: Arial;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+input, button {
+    padding: 8px;
+    margin: 5px;
+} */
+
+
+body {
+    background-color: #f0f0f0;
+    padding: 50px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+
+
+.caixa {
+    background-color: white;
+    display: inline-block;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba( 0, 0, 0, 0.2);
+}

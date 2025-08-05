@@ -1,0 +1,64 @@
+body {
+    background-color: #ffe1f8;
+    padding: 50px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #dd60d3;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    padding: 8px;
+    width: 250px;
+    border: 2px dashed #f0c8f5;
+    border-radius: 4px;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: rgb(223, 179, 122);
+}
+
+button {
+    padding: 8px 16px;
+    margin-top: 10px;
+    background-color: lightpink;
+    color: rgb(170, 80, 110);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(226, 140, 215);
+}
+
+a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: rgb(170, 80, 110);
+    background-color: plum;
+}
+
+a:hover {
+    background-color: rgb(226, 140, 215);
+}
+
+.caixa {
+    background-color: #fff2fb;
+    display: inline-block;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba( 0, 0, 0, 0.2);
+}

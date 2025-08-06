@@ -22,6 +22,7 @@
 
             <label for="selecao">Selecione uma operação</label>
             <select name="selecao" id="selecao">
+                <option value="operacoes">Operções</option>
                 <option value="soma">Soma (+)</option>
                 <option value="subtracao">Subtração (-)</option>
                 <option value="multiplicacao">Multiplicação (x)</option>

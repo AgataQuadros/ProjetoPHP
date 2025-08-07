@@ -5,18 +5,21 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border: 20px dashed #cebaf5;
     background-color: #E6F0F8;
 }
 
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 20px;
+}
 
 header {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 15vh;
+    height: 7rem;
     background-color: #0077B6;
 }
 
@@ -26,17 +29,57 @@ h1 {
     font-family: Arial, sans-serif;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+}
+
+p {
+    padding-top: 20px;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    padding: 20px;
+    text-decoration: none;
+    color: #2b85b6;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+}
+
+button {
+    font-size: 18px;
+    width: 450px;
+    margin: 12px;
+    padding: 10px;
+    color: #ffffff;
+    background-color: #0077B6;
+    border: none;
+    border-radius: 5px;
+}
+.caixa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-sizing: content-box;
+    box-shadow: 3px 3px 5px rgb(184, 184, 184);
+}
+
+input, select {
+    font-size: 1rem;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(184, 184, 184);
+    width: 500px;
 }

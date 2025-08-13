@@ -3,3 +3,84 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --1-hex: #D996AE; 
+    --2-hex: #F2C2D4; 
+    --3-hex: #E3C19B; 
+    --4-hex: #56A68F; 
+    --5-hex: #F2E4C9; 
+}
+
+body {
+    background-color: var(--5-hex);
+    border: 20px dashed var(--3-hex);
+    font-family: Arial, sans-serif;
+}
+
+main {
+    text-align: center;
+    width: 80%;
+    margin: 20px auto;
+}
+
+header, footer {
+    background: var(--4-hex);
+    color: var(--5-hex);
+    text-align: center;
+    padding: 15px 0;
+}
+
+
+input {
+    padding: 8px;
+    width: 250px;
+    border: 1px solid var(--2-hex);
+    border-radius: 4px;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--4-hex);
+}
+
+button {
+    padding: 8px 16px;
+    margin-top: 10px;
+    background-color: var(--2-hex);
+    color: var(--4-hex);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    padding: 9px 17px;
+    margin-top: 10px;
+    color: var(--1-hex);
+    background-color: var(--2-hex);
+}
+
+a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    background-color: var(--2-hex);
+    color: var(--4-hex);
+}
+
+a:hover {
+    padding: 9px 17px;
+    color: var(--1-hex);
+    background-color: var(--2-hex);
+}
+
+.caixa {
+    background-color: var();
+    display: inline-block;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba( 0, 0, 0, 0.2);
+}

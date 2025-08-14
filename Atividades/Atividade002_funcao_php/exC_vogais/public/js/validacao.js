@@ -3,24 +3,25 @@ document.addEventListener('DOMContentLoaded', function(){
 
     form.addEventListener('submit', function(event){
 
-        const um = document.getElementById('val-um').value
-        const dois = document.getElementById('val-dois').value
+        const um = document.getElementById('entrada').value;
 
-        if(um === "" || dois === ""){
-            alert("Não se faz conta sem um número, adicione um valor e tente novamente");
+        if(um === ""){
+            alert("Não da pra fazer a contagem com uma entrada vazia");
             event.preventDefault();
             return;
         }
-        else if(isNaN(um) || isNaN(dois)){
-            alert("Esses caracteres não são calculaveis, adicione um valor valido e tente novamente");
-            event.preventDefault();
-            return;
-        }
-        else if(!/^\d+$/.test(um) || !/^\d+$/.test(dois)){
+
+        // else if(isNaN(um)){
+        //     alert("Esses caracteres não são calculaveis, adicione ");
+        //     event.preventDefault();
+        //     return;
+        // }
+
+        else if(!/^[A-Za-zÀ-ÿ\s]+$/.test(um)){
             alert("Por mais que calculos com letras sejam existam essa é uma calculadora simples, adicione um número e tente novamente");
             event.preventDefault();
             return;
         }
 
     })
-})
+});

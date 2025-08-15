@@ -9,7 +9,10 @@
     function vogais($palavra){
         $contadas = str_split($palavra);
 
-        while()
+        while($contadas){
+            if("a", "e", "i", "o", "u"){
+            }
+        }
     };
 
     function consoantes($palavra) {

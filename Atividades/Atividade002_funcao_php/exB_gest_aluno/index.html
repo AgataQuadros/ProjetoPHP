@@ -4,11 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Notas de Alunos</title>
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="public/css/estilo.css">
 </head>
 <body>
-    <?php
-        include "public/processa.php";
-    ?>
+    <header>
+        <h1>
+            Sistema de Notas de Alunos
+        </h1>
+    </header>
+
+    <main>
+
+        <section class="caixa">
+            <form method="POST" action="public/processa.php" id="formulario">
+                <input type="number" name="entrada" id="entrada" placeholder="Entre com um número:">
+                <button name="calcular" id="calcular">Calcular</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="public/js/validacao.js"></script>
+
+    <footer>
+        <p>&copy; Todos os Direiro Reservado a Saint Gaia</p>
+    </footer>
 </body>
 </html>

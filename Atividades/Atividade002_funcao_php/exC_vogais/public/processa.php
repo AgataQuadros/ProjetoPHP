@@ -7,19 +7,36 @@
     $palavra = trim($convertida, " ");
 
     function vogais($palavra){
-        $contadas = str_split($palavra);
+        $qnt_a = 0;
+        $qnt_e = 0;
+        $qnt_i = 0;
+        $qnt_o = 0;
+        $qnt_u = 0;
 
-        while($contadas){
-            if("a", "e", "i", "o", "u"){
+        foreach(count_chars($palavra, 1) as $i => $letra){
+
+            if(chr($i) == 'a'){
+                $qnt_a += $letra;
             }
+            if(chr($i) == 'e'){
+                $qnt_e += $letra;
+            }
+            if(chr($i) == 'i'){
+                $qnt_i += $letra;
+            }
+            if(chr($i) == 'o'){
+                $qnt_o += $letra;
+            }
+            if(chr($i) == 'u'){
+                $qnt_u += $letra;
+            }
+
         }
-    };
 
-    function consoantes($palavra) {
-
+        echo "ha $qnt_a A na frase/palavra.<br>";
+        echo "ha $qnt_e E na frase/palavra.<br>";
+        echo "ha $qnt_i I na frase/palavra.<br>";
+        echo "ha $qnt_o O na frase/palavra.<br>";
+        echo "ha $qnt_u U na frase/palavra.<br>";
     };
 ?>
-<!-- encontrar um jeito de quebrar a minha frase em caquinhos em um array [X}-->
-<!-- passar palavra para caixa baixa e retirar os espaços [X]
- contar os elementos em palavra modificado e retirar as vogais
- usar o resultado da contagem menos as vogais e usa para contar as consoantes-->

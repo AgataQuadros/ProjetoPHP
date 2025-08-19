@@ -16,9 +16,13 @@
     <main>
 
         <section class="caixa">
-            <form method="POST" action="public/processa.php" id="formulario">
-                <input type="number" name="entrada" id="entrada" placeholder="Entre com um número:">
-                <button name="calcular" id="calcular">Calcular</button>
+            <form method="POST" id="formulario">
+                <input type="text" name="nome" id="nome" placeholder="Entre com o nome do aluno:">
+                <input type="number" name="nota1" id="nota1" placeholder="nota1">
+                <input type="number" name="nota2" id="nota2" placeholder="nota2">
+                <input type="number" name="nata3" id="nota3" placeholder="nota3">
+                <input type="number" name="nota4" id="nota4" placeholder="nota4">
+                <button name="enviar" id="enviar">Registrar</button>
             </form>
         </section>
     </main>

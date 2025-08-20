@@ -32,19 +32,19 @@
     <form method="POST">
         
         <label>Nome do Aluno:</label><br>
-        <input type="text" nome="nome" required><br>
+        <input type="text" name="nome" required><br>
 
         <label>Nota 1:</label><br>
-        <input type="number" nome="nota1" required><br>
+        <input type="number" name="nota1" required><br>
 
         <label>Nota 2:</label><br>
-        <input type="number" nome="nota2" required><br>
+        <input type="number" name="nota2" required><br>
 
         <label>Nota 3:</label><br>
-        <input type="number" nome="nota3" required><br>
+        <input type="number" name="nota3" required><br>
 
         <label>Nota 4:</label><br>
-        <input type="number" nome="nota4" required><br>
+        <input type="number" name="nota4" required><br>
 
         <input type="submit" value="cadastrar">
     </form>
@@ -54,7 +54,7 @@
             echo '<h2> 9 - Somando Array com Entrada de Dados </h2>';
 
             if ($_SERVER["REQUEST_METHOD"] === "POST"){
-                $alunos = [
+                $aluno = [
                     'nome' => $_POST['nome'],
                     'nota1' => (float) $_POST['nota1'],
                     'nota2' => (float) $_POST['nota2'],
@@ -62,9 +62,13 @@
                     'nota4' => (float) $_POST['nota4']
                 ];
             }
+
             echo "<hr>";
             echo "<h2>Rsultado</h2>";
             echo "<h3>Aluno: " . htmlspecialchars($aluno['nome']). "</h3>";
+
+            $soma_notas = 0;
+            $qnt_notas = 0;
 
             foreach($aluno as $chave => $valor){
 
@@ -75,9 +79,6 @@
 
                     $qnt_notas++;
                 }
-
-                
-
             }
             
             $media = $soma_notas / $qnt_notas;

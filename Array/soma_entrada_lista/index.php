@@ -62,19 +62,19 @@
     <form method="POST">
         
         <label>Nome do Aluno:</label><br>
-        <input type="text" nome="nome" required><br>
+        <input type="text" name="nome" required><br>
 
         <label>Nota 1:</label><br>
-        <input type="number" nome="nota1" required><br>
+        <input type="number" name="nota1" required><br>
 
         <label>Nota 2:</label><br>
-        <input type="number" nome="nota2" required><br>
+        <input type="number" name="nota2" required><br>
 
         <label>Nota 3:</label><br>
-        <input type="number" nome="nota3" required><br>
+        <input type="number" name="nota3" required><br>
 
         <label>Nota 4:</label><br>
-        <input type="number" nome="nota4" required><br>
+        <input type="number" name="nota4" required><br>
 
         <input type="submit" value="cadastrar">
     </form>

@@ -51,7 +51,7 @@
 
         <?php
             echo '<hr>';
-            echo '<h2> 8 - Somando Array com Entrada de Dados </h2>';
+            echo '<h2> 9 - Somando Array com Entrada de Dados </h2>';
 
             if ($_SERVER["REQUEST_METHOD"] === "POST"){
                 $alunos = [
@@ -85,6 +85,6 @@
             echo "<br><strong>Soma das Notas:</strong> $soma_notas</br>";
             echo "<strong>Média:</strong>" . number_format($media, 2, ', ', '.');
         ?>
-        
+
 </body>
 </html>

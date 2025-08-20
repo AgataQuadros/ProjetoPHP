@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 40px;
+        }
+
+        input[type="text"], input[type="number"] {
+            padding: 8px;
+            margin: 5px 0;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Cadastro de Alunos</h1>
+    </header>
+
+    <form method="POST">
+        
+        <label>Nome do Aluno:</label><br>
+        <input type="text" nome="nome" required><br>
+
+        <label>Nota 1:</label><br>
+        <input type="number" nome="nota1" required><br>
+
+        <label>Nota 2:</label><br>
+        <input type="number" nome="nota2" required><br>
+
+        <label>Nota 3:</label><br>
+        <input type="number" nome="nota3" required><br>
+
+        <label>Nota 4:</label><br>
+        <input type="number" nome="nota4" required><br>
+
+        <input type="submit" value="cadastrar">
+    </form>
+
+    <main>
+        <?php
+            echo '<hr>';
+            echo '<h2> 8 - Sum e Slice </h2>';
+
+            $alunos = [
+                [
+                    'nome' => 'Maria',
+                    'nota1' => 10,
+                    'nota2' => 9,
+                    'nota3' => 8,
+                    'nota4' => 10,
+                ],
+
+                [
+                    'nome' => 'João',
+                    'nota1' => 7,
+                    'nota2' => 8,
+                    'nota3' => 6,
+                    'nota4' => 9,
+                ]
+            ];
+
+            foreach($alunos as $aluno){
+
+                $nome = $aluno['nome'];
+
+                $notas = array_slice($aluno, 1);
+
+                $soma_notas = array_sum($notas);
+
+                $media = $soma_notas / count($notas);
+
+
+                echo "<h3> Aluno: $nome</h3>";
+                echo "Notas:" . implode(', ', $notas). "<br>";
+                echo "Soma: $soma_notas<br>";
+
+                echo "Média: " . number_format($media, 2, ', ', '.') . "<hr>";
+
+            }
+        ?>
+    </main>
+
+</body>
+</html>

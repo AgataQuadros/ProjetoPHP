@@ -49,49 +49,42 @@
         <input type="submit" value="cadastrar">
     </form>
 
-    <main>
         <?php
             echo '<hr>';
-            echo '<h2> 8 - Sum e Slice </h2>';
+            echo '<h2> 8 - Somando Array com Entrada de Dados </h2>';
 
-            $alunos = [
-                [
-                    'nome' => 'Maria',
-                    'nota1' => 10,
-                    'nota2' => 9,
-                    'nota3' => 8,
-                    'nota4' => 10,
-                ],
+            if ($_SERVER["REQUEST_METHOD"] === "POST"){
+                $alunos = [
+                    'nome' => $_POST['nome'],
+                    'nota1' => (float) $_POST['nota1'],
+                    'nota2' => (float) $_POST['nota2'],
+                    'nota3' => (float) $_POST['nota3'],
+                    'nota4' => (float) $_POST['nota4']
+                ];
+            }
+            echo "<hr>";
+            echo "<h2>Rsultado</h2>";
+            echo "<h3>Aluno: " . htmlspecialchars($aluno['nome']). "</h3>";
 
-                [
-                    'nome' => 'João',
-                    'nota1' => 7,
-                    'nota2' => 8,
-                    'nota3' => 6,
-                    'nota4' => 9,
-                ]
-            ];
+            foreach($aluno as $chave => $valor){
 
-            foreach($alunos as $aluno){
+                if ($chave !== 'nome' && is_numeric($valor)){
+                    echo "$chave: $valor<br>";
 
-                $nome = $aluno['nome'];
+                    $soma_notas += $valor;
 
-                $notas = array_slice($aluno, 1);
+                    $qnt_notas++;
+                }
 
-                $soma_notas = array_sum($notas);
-
-                $media = $soma_notas / count($notas);
-
-
-                echo "<h3> Aluno: $nome</h3>";
-                echo "Notas:" . implode(', ', $notas). "<br>";
-                echo "Soma: $soma_notas<br>";
-
-                echo "Média: " . number_format($media, 2, ', ', '.') . "<hr>";
+                
 
             }
-        ?>
-    </main>
+            
+            $media = $soma_notas / $qnt_notas;
 
+            echo "<br><strong>Soma das Notas:</strong> $soma_notas</br>";
+            echo "<strong>Média:</strong>" . number_format($media, 2, ', ', '.');
+        ?>
+        
 </body>
 </html>

@@ -16,12 +16,20 @@
     </header>
 
     <main>
-
         <section class="caixa">
-            <form method="POST" action="public/processa.php" id="formulario">
+            <form method="POST" id="formulario">
                 <input type="number" name="entrada" id="entrada" placeholder="Entre com um número:">
                 <button name="calcular" id="calcular">Calcular</button>
             </form>
+        </section>
+
+        <section class="caixa">
+
+            <?php
+                include "public/processa.php";
+                multiplicacao($numero)
+            ?>
+
         </section>
     </main>
 

@@ -25,6 +25,13 @@
                 <button name="enviar" id="enviar">Registrar</button>
             </form>
         </section>
+
+        <section>
+            <?php
+                include "public/processa.php";
+                media($alunos)
+            ?>
+        </section>
     </main>
 
     <script src="public/js/validacao.js"></script>

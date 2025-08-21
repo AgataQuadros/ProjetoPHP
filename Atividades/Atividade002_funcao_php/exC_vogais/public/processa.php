@@ -6,7 +6,7 @@
     $convertida = strtolower($entrada);
     $palavra = trim($convertida, " ");
 
-    function vogais($palavra){
+    function vogais($palavra, $entrada){
         $qnt_a = 0;
         $qnt_e = 0;
         $qnt_i = 0;
@@ -38,5 +38,6 @@
         echo "ha $qnt_i I na frase/palavra.<br>";
         echo "ha $qnt_o O na frase/palavra.<br>";
         echo "ha $qnt_u U na frase/palavra.<br>";
+        echo "$entrada";
     };
 ?>

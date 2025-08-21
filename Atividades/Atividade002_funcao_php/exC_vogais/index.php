@@ -30,7 +30,7 @@
 
             <?php
                 include "public/processa.php";
-                vogais($palavra)
+                vogais($palavra,$entrada)
             ?>
 
         </section>

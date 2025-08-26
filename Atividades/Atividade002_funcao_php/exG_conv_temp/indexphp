@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperaturas</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Conversor de Temperaturas
+        </h1>
+    </header>
+
+    <main>
+
+        <section>
+
+            <form action="processa.php" method="post">
+
+                <input type="number" name="entrada" id="entrada" placeholder="Entre com a temperatura:">
+
+                <select name="selecao" id="selecao">
+                    <option value="ck" id="fahrenheit">Celsius para Kelvin</option>
+                    <option value="cf" id="celsius">Celsius para Fahrenheit</option>
+                    <option value="fc" id="kelvin">Fahrenheit para Celsius</option>
+                    <option value="fk" id="fahrenheit">Fahrenheit para Kelvin</option>
+                    <option value="kc" id="celsius">Kelvin para Celsius</option>
+                    <option value="kf" id="kelvin">Kelvin para Fahrenheit</option>
+                </select>
+
+                <button id="enviar">Converter</button>
+
+            </form>
+
+        </section>
+
+        <section>
+
+            
+
+        </section>
+
+    </main>
+
+    <script src="public/js/validacao.js"></script>
+
+    <footer>
+        <p>
+            &copy; Todos os Direiro Reservado a Saint Gaia
+        </p>
+    </footer>
+</body>
+</html>

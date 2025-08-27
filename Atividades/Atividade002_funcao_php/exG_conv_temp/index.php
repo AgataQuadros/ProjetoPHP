@@ -17,7 +17,7 @@
 
         <section>
 
-            <form action="processa.php" method="post">
+            <form method="post" id="formulario">
 
                 <input type="number" name="entrada" id="entrada" placeholder="Entre com a temperatura:">
 
@@ -38,7 +38,14 @@
 
         <section>
 
-            
+            <?php
+
+                include "public/processa.php";
+                if (isset($resultado)) {
+                    echo "<p>$resultado</p>";
+                }
+                
+            ?>
 
         </section>
 

@@ -1,7 +1,7 @@
 <?php
     if (isset($_POST['entrada'])) {
         $entrada = $_POST['entrada'];
-        switch ($_POST['etr-convercao']) {
+        switch ($_POST['selecao']) {
             case "ck":
                 $resultado = celsiusKelvin($entrada);
                 break;
